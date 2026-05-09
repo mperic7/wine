@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-oznaka — Graševina 2024</title>
+    <meta name="robots" content="noindex, nofollow">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: #fafaf8;
+            color: #2c2c2c;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 520px;
+            margin: 0 auto;
+            padding: 24px 20px 40px;
+        }
+
+        /* Language switcher */
+        .lang-switch {
+            display: flex;
+            justify-content: flex-end;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        .lang-switch a {
+            font-size: 13px;
+            text-decoration: none;
+            color: #888;
+            padding: 4px 10px;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+        .lang-switch a.active {
+            color: #2c2c2c;
+            background: #e8e6e1;
+            font-weight: 500;
+        }
+        .lang-switch a:hover { color: #2c2c2c; }
+
+        /* Header */
+        .wine-header {
+            text-align: center;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #e0ddd6;
+            margin-bottom: 28px;
+        }
+        .wine-header h1 {
+            font-size: 22px;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+            margin-bottom: 4px;
+        }
+        .wine-meta {
+            font-size: 14px;
+            color: #777;
+        }
+        .wine-meta span + span::before {
+            content: " · ";
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 28px;
+        }
+        .section-title {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: #999;
+            margin-bottom: 12px;
+        }
+
+        /* Ingredients */
+        .ingredients-list {
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        .allergen {
+            font-weight: 600;
+            text-decoration: underline;
+            text-decoration-color: #c0392b;
+            text-underline-offset: 3px;
+        }
+
+        /* Nutrition table */
+        .nutrition-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        .nutrition-table tr {
+            border-bottom: 1px solid #ece9e2;
+        }
+        .nutrition-table tr:last-child {
+            border-bottom: none;
+        }
+        .nutrition-table td {
+            padding: 10px 0;
+        }
+        .nutrition-table td:first-child {
+            color: #555;
+        }
+        .nutrition-table td:last-child {
+            text-align: right;
+            font-weight: 500;
+            font-variant-numeric: tabular-nums;
+        }
+        .nutrition-table .sub-row td:first-child {
+            padding-left: 16px;
+            font-size: 13px;
+        }
+        .nutrition-table .energy-row td {
+            font-weight: 600;
+            color: #2c2c2c;
+        }
+
+        /* Allergens box */
+        .allergen-box {
+            background: #fef9f0;
+            border: 1px solid #f0e0c0;
+            border-radius: 8px;
+            padding: 14px 16px;
+            font-size: 14px;
+        }
+        .allergen-box strong {
+            color: #b8860b;
+        }
+
+        /* Responsible consumption */
+        .responsible {
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+            padding-top: 24px;
+            border-top: 1px solid #e0ddd6;
+        }
+
+        /* Print styles */
+        @media print {
+            body { background: white; }
+            .lang-switch { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switch">
+            <a href="./" class="active">HR</a>
+            <a href="./en.html" class="">EN</a>
+        </div>
+
+        <div class="wine-header">
+            <h1>Graševina 2024</h1>
+            <div class="wine-meta">
+                <span>Kvalitetno vino</span>
+                <span>ZOI Slavonija</span>
+                <span>12,7 % vol</span>
+                <span>0,75 L</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Sastojci</div>
+            <div class="ingredients-list">
+                grožđe, <span class="allergen">sumporni dioksid (sulfiti)</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Alergeni</div>
+            <div class="allergen-box">
+                <strong>⚠ Sadrži:</strong> sulfiti
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Nutritivna deklaracija (100 ml)</div>
+            <table class="nutrition-table">
+                <tr class="energy-row">
+                    <td>Energija</td>
+                    <td>300 kJ / 72 kcal</td>
+                </tr>
+                <tr>
+                    <td>Masti</td>
+                    <td>< 0,5 g</td>
+                </tr>
+                <tr class="sub-row">
+                    <td>od kojih zasićene masne kiseline</td>
+                    <td>< 0,5 g</td>
+                </tr>
+                <tr>
+                    <td>Ugljikohidrati</td>
+                    <td>0,2 g</td>
+                </tr>
+                <tr class="sub-row">
+                    <td>od kojih šećeri</td>
+                    <td>0,2 g</td>
+                </tr>
+                <tr>
+                    <td>Bjelančevine</td>
+                    <td>< 0,5 g</td>
+                </tr>
+                <tr>
+                    <td>Sol</td>
+                    <td>< 0,5 g</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="responsible">
+            Pretjerana konzumacija alkohola štetna je za zdravlje.
+        </div>
+    </div>
+</body>
+</html>

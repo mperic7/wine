@@ -1,0 +1,68 @@
+{
+  "winery": {
+    "name": "OPG Perić Slavko",
+    "address": "Trg Sv. Augustina 14, 34330 Velika",
+    "region": "Slavonija",
+    "url": "https://opg-peric.hr"
+  },
+  "wines": [
+    {
+      "id": "grasevina-2024",
+      "name": "Graševina",
+      "vintage": 2024,
+      "category": "Kvalitetno vino",
+      "designation": "KZP",
+      "origin": "ZOI Slavonija",
+      "grape": "Graševina",
+      "color": "bijelo",
+      "volume_ml": 750,
+      "alcohol_pct": 12.7,
+      "analysis": {
+        "actual_alcohol_pct": 12.7,
+        "actual_alcohol_g_per_l": 100.1,
+        "total_dry_extract_g_per_l": 18.8,
+        "reducing_sugars_g_per_l": 1.7,
+        "total_acidity_as_tartaric_g_per_l": 5.2,
+        "volatile_acidity_as_acetic_g_per_l": 0.3,
+        "non_volatile_acidity_g_per_l": 4.8,
+        "ph": 3.22,
+        "free_so2_mg_per_l": 13,
+        "total_so2_mg_per_l": 80,
+        "ash_g_per_l": 1.7,
+        "relative_density": 0.9906
+      },
+      "nutrition_per_100ml": {
+        "energy_kj": 300,
+        "energy_kcal": 72,
+        "fat_g": 0,
+        "saturated_fat_g": 0,
+        "carbohydrates_g": 0.2,
+        "sugars_g": 0.2,
+        "protein_g": 0,
+        "salt_g": 0
+      },
+      "ingredients": {
+        "hr": [
+          "grožđe",
+          "sumporni dioksid (sulfiti)"
+        ],
+        "en": [
+          "grapes",
+          "sulphur dioxide (sulphites)"
+        ]
+      },
+      "allergens": {
+        "hr": [
+          "sulfiti"
+        ],
+        "en": [
+          "sulphites"
+        ]
+      },
+      "responsible_consumption_note": {
+        "hr": "Pretjerana konzumacija alkohola štetna je za zdravlje.",
+        "en": "Excessive alcohol consumption is harmful to health."
+      }
+    }
+  ]
+}
