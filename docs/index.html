@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPG Perić — Vinarija, Velika</title>
+    <meta name="description" content="Obiteljska vinarija Perić iz Velike. Kvalitetna slavonska vina sa zaštićenom oznakom izvornosti.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --wine: #722f37;
+            --wine-light: #8b3a42;
+            --cream: #faf8f4;
+            --warm-white: #f5f0e8;
+            --text: #2c2821;
+            --text-light: #6b6560;
+            --gold: #b8960c;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text);
+            background: var(--cream);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ---- HERO ---- */
+        .hero {
+            position: relative;
+            height: 90vh;
+            min-height: 500px;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+        }
+        .hero img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 30%;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(20,15,10,0.85) 0%, rgba(20,15,10,0.2) 50%, transparent 100%);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 0 24px 60px;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+            color: white;
+        }
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(36px, 6vw, 56px);
+            font-weight: 400;
+            line-height: 1.15;
+            margin-bottom: 12px;
+        }
+        .hero-content h1 em {
+            font-style: italic;
+            color: #e8d5a3;
+        }
+        .hero-content p {
+            font-size: 16px;
+            color: rgba(255,255,255,0.75);
+            max-width: 500px;
+            line-height: 1.6;
+        }
+
+        /* ---- SECTION LAYOUT ---- */
+        section {
+            padding: 80px 24px;
+        }
+        .inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .section-label {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--wine);
+            margin-bottom: 16px;
+        }
+        .section-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(28px, 4vw, 38px);
+            font-weight: 400;
+            line-height: 1.25;
+            margin-bottom: 24px;
+        }
+        .section-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--text-light);
+            max-width: 600px;
+        }
+
+        /* ---- O NAMA ---- */
+        .about {
+            background: var(--cream);
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+            align-items: center;
+        }
+        .about-grid img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* ---- VINA ---- */
+        .wines {
+            background: var(--warm-white);
+        }
+        .wine-card {
+            border: 1px solid #e0dbd2;
+            border-radius: 8px;
+            padding: 32px;
+            background: white;
+            margin-top: 32px;
+        }
+        .wine-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 8px;
+        }
+        .wine-card .wine-details {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 16px;
+        }
+        .wine-card .wine-details span + span::before {
+            content: " · ";
+        }
+        .wine-card .wine-desc {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text-light);
+        }
+
+        /* ---- PODRUM ---- */
+        .cellar {
+            background: var(--text);
+            color: white;
+        }
+        .cellar .section-label {
+            color: var(--gold);
+        }
+        .cellar .section-heading {
+            color: white;
+        }
+        .cellar .section-text {
+            color: rgba(255,255,255,0.65);
+        }
+        .cellar-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+
+        /* ---- KONTAKT ---- */
+        .contact {
+            background: var(--cream);
+        }
+        .contact-info {
+            margin-top: 32px;
+            font-size: 16px;
+            line-height: 2;
+            color: var(--text-light);
+        }
+        .contact-info a {
+            color: var(--wine);
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* ---- FOOTER ---- */
+        footer {
+            text-align: center;
+            padding: 32px 24px;
+            font-size: 13px;
+            color: var(--text-light);
+            border-top: 1px solid #e0dbd2;
+        }
+
+        /* ---- RESPONSIVE ---- */
+        @media (max-width: 640px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero { height: 75vh; min-height: 400px; }
+            section { padding: 60px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO -->
+    <div class="hero">
+        <img src="images/vinograd.jpg" alt="Vinograd OPG Perić">
+        <div class="hero-content">
+            <h1>Vinarija <em>Perić</em></h1>
+            <p>Obiteljska tradicija vinogradarstva u srcu Slavonije. Kvalitetna vina sa zaštićenom oznakom izvornosti.</p>
+        </div>
+    </div>
+
+    <!-- O NAMA -->
+    <section class="about">
+        <div class="inner">
+            <div class="section-label">O nama</div>
+            <h2 class="section-heading">Gdje tradicija susreće strast</h2>
+            <p class="section-text">
+                OPG Perić obiteljsko je gospodarstvo smješteno u Velikoj, u srcu slavonskog vinogorja.
+                S posvećenošću kvaliteti i poštovanjem prema zemlji, uzgajamo i proizvodimo vina
+                koja odražavaju karakter ovog kraja.
+            </p>
+            <div class="about-grid">
+                <img src="images/ulaz.jpg" alt="Ulaz u vinariju Perić">
+                <div>
+                    <p class="section-text">
+                        Naši vinogradi nalaze se na obroncima koji uživaju idealnu ekspoziciju
+                        i mikroklimu za uzgoj autohtonih slavonskih sorti. Svaka boca nosi priču
+                        o berbi, o godini i o ljudima koji stoje iza nje.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VINA -->
+    <section class="wines">
+        <div class="inner">
+            <div class="section-label">Naša vina</div>
+            <h2 class="section-heading">Slavonija u čaši</h2>
+            <p class="section-text">
+                Proizvodimo kvalitetna vina sa zaštićenom oznakom izvornosti "Slavonija",
+                s naglaskom na sorte koje ovdje daju najbolje od sebe.
+            </p>
+
+            <div class="wine-card">
+                <h3>Graševina 2024</h3>
+                <div class="wine-details">
+                    <span>Kvalitetno vino KZP</span>
+                    <span>ZOI Slavonija</span>
+                    <span>12,7% vol</span>
+                </div>
+                <p class="wine-desc">
+                    Naša Graševina berbe 2024. — svježa, aromatična, s finim mineralnim karakterom
+                    tipičnim za slavonske vinograde. Idealna uz riječnu ribu, bijela mesa
+                    i slavonske sir-salate.
+                </p>
+            </div>
+
+            <!-- Dodaj više wine-card divova kad imaš više vina -->
+        </div>
+    </section>
+
+    <!-- PODRUM -->
+    <section class="cellar">
+        <div class="inner">
+            <div class="section-label">Podrum</div>
+            <h2 class="section-heading">Gdje vino dobiva karakter</h2>
+            <p class="section-text">
+                U našem podrumu vino sazrijeva u kontroliranim uvjetima,
+                čuvajući svježinu i sortni karakter od berbe do boce.
+            </p>
+            <img class="cellar-img" src="images/podrum.jpg" alt="Podrum vinarije Perić">
+        </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section class="contact">
+        <div class="inner">
+            <div class="section-label">Kontakt</div>
+            <h2 class="section-heading">Posjetite nas</h2>
+            <div class="contact-info">
+                <strong>OPG Perić Slavko</strong><br>
+                Trg Sv. Augustina 14<br>
+                34330 Velika, Hrvatska<br><br>
+                Degustacije i posjete moguće su uz prethodnu najavu.
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 OPG Perić Slavko. Sva prava pridržana. · Pretjerana konzumacija alkohola štetna je za zdravlje.
+    </footer>
+
+</body>
+</html>
